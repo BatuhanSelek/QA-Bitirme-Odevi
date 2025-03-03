@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "85bcfd38-9b95-4f4b-8a58-56e789f785da",
+		"name": "PetStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42532222"
+	},
+	"item": [
+		{
+			"name": "addCreatePet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 789456,\n  \"category\": {\n    \"id\": 456123,\n    \"name\": \"Evcil Hayvanlar\"\n  },\n  \"name\": \"Golden Retriever\",\n  \"photoUrls\": [\n    \"https://www.google.com/url?sa=i&url=https%3A%2F%2Ftr.m.wikipedia.org%2Fwiki%2FDosya%3AGolden_Retriever_with_tennis_ball.jpg&psig=AOvVaw0JFvZ2GXGG0QJl-cyn50lo&ust=1741099775850000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPCVu6CU7osDFQAAAAAdAAAAABAE\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 123456,\n      \"name\": \"Köpek\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCreateUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 789456,\n  \"username\": \"batuselek\",\n  \"firstName\": \"Batuhan\",\n  \"lastName\": \"Selek\",\n  \"email\": \"batuselek@gmail.com\",\n  \"password\": \"1234\",\n  \"phone\": \"5554443322\",\n  \"userStatus\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserInfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/batuselek",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"batuselek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStatusAvailablePet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/findByStatus?status=available",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "available"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/batuselek",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"batuselek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 159951,\n  \"username\": \"begumyangın\",\n  \"firstName\": \"Begüm\",\n  \"lastName\": \"Yangın\",\n  \"email\": \"begumyangin@gmail.com\",\n  \"password\": \"4321\",\n  \"phone\": \"5553332211\",\n  \"userStatus\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/batuselek",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"batuselek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePet",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 147963,\n  \"category\": {\n    \"id\": 963741,\n    \"name\": \"Köpekler\"\n  },\n  \"name\": \"Labrador Retriever\",\n  \"photoUrls\": [\n    \"https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FLabrador_Retriever&psig=AOvVaw14pJ3z5NtdbxIjiamlhCZz&ust=1741100810444000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJiztI2Y7osDFQAAAAAdAAAAABAE\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 852741,\n      \"name\": \"Evcil Hayvan\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
